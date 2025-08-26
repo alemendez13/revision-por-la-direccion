@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva Revisión - Sansce</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-revision">
+
+  <header class="main-header">
+    <img src="assets/logo-sansce.png" alt="Logo de Sansce" class="logo">
+    <h1>PMR-FR-06 Sistema de Revisión por la Dirección</h1>
+  </header>
+
+  <main class="dashboard-container">
+
+    <aside class="sidebar">
+      <h3>ENTRADAS</h3>
+      <nav>
+        <ol class="indicator-list">
+          <li><a href="#bloque-1" class="active">Estatus de revisiones previas</a></li>
+          <li><a href="#bloque-2">Cambios en el contexto</a></li>
+          <li><a href="#bloque-3">Satisfacción del usuario</a></li>
+          <li><a href="#bloque-4">Resultados estratégicos</a></li>
+          <li><a href="#bloque-5">Resultados tácticos</a></li>
+          <li><a href="#bloque-6">Status de no conformidades</a></li>
+          <li><a href="#bloque-7">Resultados de auditorías</a></li>
+          <li><a href="#bloque-8">Desempeño de proveedores</a></li>
+          <li><a href="#bloque-9">Recursos</a></li>
+          <li><a href="#bloque-10">Riesgos y oportunidades</a></li>
+          <li><a href="#bloque-11">Accesibilidad a servicios</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <section class="content-area">
+
+      <div id="upload-section" class="content-card">
+  <h2>Paso 1: Cargar Datos del Periodo</h2>
+  <p>Haz clic en el botón para cargar los datos preparados en la hoja "Datos_Entrada" de Google Sheets.</p>
+  <button id="load-g-sheet-btn" class="button button-primary">Cargar Datos desde Google Sheets</button>
+</div>
+
+      <div id="dashboard-section" class="hidden">
+
+    <div id="vista-kpi-multiple" class="content-card hidden">
+        <h2 id="kpi-multiple-title"></h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Meta</th>
+                    <th>Resultado</th>
+                    <th>Conclusión</th>
+                </tr>
+            </thead>
+            <tbody id="kpi-multiple-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div id="vista-texto" class="content-card hidden">
+        <h2 id="texto-title"></h2>
+        <div class="conclusion-section">
+            <h4>Contexto Interno</h4>
+            <textarea id="texto-interno" readonly></textarea>
+            <h4>Impacto Interno</h4>
+            <textarea id="texto-impacto-interno" readonly></textarea>
+            <h4>Contexto Externo</h4>
+            <textarea id="texto-externo" readonly></textarea>
+            <h4>Impacto Externo</h4>
+            <textarea id="texto-impacto-externo" readonly></textarea>
+        </div>
+    </div>
+
+    <div id="vista-tabla-generica" class="content-card hidden">
+        <h2 id="tabla-generica-title"></h2>
+        <table class="data-table">
+            <tbody id="tabla-generica-body">
+                </tbody>
+        </table>
+    </div>
+
+    <div id="conclusion-section" class="content-card">
+      <h3>Conclusiones y Análisis del Bloque</h3>
+      <textarea id="conclusion-textarea" placeholder="Escribe aquí tus observaciones sobre este bloque..."></textarea>
+    </div>
+
+    <div id="salidas-section" class="content-card">
+        <h3>Paso Final: Registrar Salidas y Guardar</h3>
+        <textarea id="mejoras-procesos" placeholder="Mejoras a procesos y al sistema..."></textarea>
+        <textarea id="mejoras-productos" placeholder="Mejoras a productos y servicios..."></textarea>
+        <textarea id="cambios-sistema" placeholder="Cambios al sistema de gestión..."></textarea>
+        <textarea id="necesidad-recursos" placeholder="Necesidades de recursos..."></textarea>
+        <button id="save-review-btn" class="button button-primary">Finalizar y Guardar Revisión</button>
+    </div>
+
+</div>
+
+    </section>
+
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
